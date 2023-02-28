@@ -30,8 +30,8 @@ contract Auction {
 
     mapping(address => uint256) public bids;
 
-    constructor() {
-        owner = payable(msg.sender);
+    constructor(address eoa) {
+        owner = payable(eoa);
         auctionState = State.Running;
     }
 
